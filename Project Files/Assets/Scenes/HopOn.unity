@@ -878,7 +878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 25554600742158779, guid: cffbd7f75d3f0154c9f5c12bdbc11bc5, type: 3}
-  collectiblePrefab: {fileID: 3932519476515566624, guid: 54f2cf1a09714cf4c86284c8cbb38eae, type: 3}
+  collectiblePrefab: {fileID: 8298093379580762953, guid: 785a598a6813b5c469a21cc08f535667, type: 3}
   platformCount: 100
   platformSpacing: 5
   collectiblesToDistribute: 100
