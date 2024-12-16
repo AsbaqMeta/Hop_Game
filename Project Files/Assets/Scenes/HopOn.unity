@@ -522,7 +522,7 @@ MonoBehaviour:
   platformSpacing: 5
   collectibleChance: 0.4
   range: 3
-  Speed: 2
+  Speed: 3
 --- !u!4 &893604034
 Transform:
   m_ObjectHideFlags: 0
@@ -645,7 +645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 788381587}
   offset: {x: 0, y: 5, z: -10}
-  smoothSpeed: 0.125
+  smoothSpeed: 0.225
 --- !u!1 &1141972478
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1216,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8778892773075586544, guid: ad20b4e105a549043919ea37098360fb, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: e0f8dbeab4ddee64192b4147851c72b5, type: 2}
     - target: {fileID: 8784238441561964842, guid: ad20b4e105a549043919ea37098360fb, type: 3}
       propertyPath: jumpForce
       value: 8

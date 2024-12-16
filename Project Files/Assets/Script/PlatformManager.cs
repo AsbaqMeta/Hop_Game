@@ -44,8 +44,18 @@ public class PlatformManager : MonoBehaviour
             // Recycle platform when out of view
             if (platforms[i].transform.position.z < -10f)
             {
-                // Recycle platform to the front
-                Vector3 newPosition = new Vector3(Random.Range(-range, range), 0, platformCount * platformSpacing);
+                // Find the furthest platform along the Z-axis
+                float furthestZ = float.MinValue;
+                foreach (var platform in platforms)
+                {
+                    if (platform.transform.position.z > furthestZ)
+                    {
+                        furthestZ = platform.transform.position.z;
+                    }
+                }
+
+                // Recycle the current platform to a new position in front of the furthest platform
+                Vector3 newPosition = new Vector3(Random.Range(-range, range), 0, furthestZ + platformSpacing);
                 platforms[i].transform.position = newPosition;
 
                 // Reuse or spawn collectible
@@ -69,4 +79,5 @@ public class PlatformManager : MonoBehaviour
             }
         }
     }
+
 }
