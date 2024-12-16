@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         UpdateScoreText();
-        GenerateNewPlatformColor(); // Initialize with a random color
     }
 
     public void IncreaseScore(int amount)

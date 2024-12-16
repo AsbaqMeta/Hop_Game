@@ -4,6 +4,12 @@ public class Collectible : MonoBehaviour
 {
     public AudioClip collectSound; // Sound to play on collection
     private AudioSource audioSource;
+    public Platform platform;
+
+    private void Awake()
+    {
+        platform = FindObjectOfType<Platform>();
+    }
 
     void Start()
     {
@@ -18,7 +24,8 @@ public class Collectible : MonoBehaviour
             GameManager.Instance.IncreaseScore(10);
 
             // to change the platform color
-            GameManager.Instance.GenerateNewPlatformColor();
+            platform.UpdateColor(new Color(Random.value, Random.value, Random.value));
+
 
             // Play sound
             if (collectSound != null)

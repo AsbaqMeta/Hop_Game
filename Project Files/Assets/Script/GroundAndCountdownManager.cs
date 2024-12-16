@@ -6,7 +6,7 @@ using System.Collections;
 public class GroundAndCountdownManager : MonoBehaviour
 {
     public GameObject ground; // Reference to the ground object
-    public GameObject d; // Reference to the ground object
+    public GameObject Panel; // Reference to the ground object
     public TMP_Text countdownText; // Reference to a TextMeshPro UI Text object (or use Text if not using TMP)
     private float countdownDuration = 5f; // Duration before the ground disappears
 
@@ -33,7 +33,7 @@ public class GroundAndCountdownManager : MonoBehaviour
         if (ground != null)
         {
             ground.SetActive(false); // Disable the ground (or destroy it if needed)
-            d.SetActive(false);
+            Panel.SetActive(false);
         }
     }
 }
